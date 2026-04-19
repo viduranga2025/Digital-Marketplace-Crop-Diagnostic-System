@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart SL - Farmer's Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="agro-header">
+            <div class="user-profile">
+                <i class="fa-solid fa-flatbed-heavy"></i>
+                <h2>AgroSmart <span>SL</span></h2>
+            </div>
+            <button class="lang-btn">සිංහල</button>
+        </header>
+
+        <main class="content">
+            <section class="diagnostic-section card">
+                <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Disease Identifier</h3>
+                <p>Upload a photo of the infected leaf to identify the disease.</p>
+                <div class="upload-area" id="dropZone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <input type="file" id="fileInput" hidden>
+                    <p>Click to Upload Leaf Photo</p>
+                </div>
+                <div id="diagResult" class="result-box hidden">
+                    <p id="resultText"></p>
+                    <small id="remedyText"></small>
+                </div>
+            </section>
+
+            <section class="market-section">
+                <div class="section-header">
+                    <h3>Marketplace</h3>
+                    <select id="cropFilter" onchange="filterCrops()">
+                        <option value="all">All Crops</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Grains">Grains</option>
+                    </select>
+                </div>
+
+                <div class="crop-grid" id="cropGrid">
+                    </div>
+            </section>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active"><i class="fa-solid fa-shop"></i></div>
+            <div class="nav-item"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div class="nav-item"><i class="fa-solid fa-circle-plus"></i></div>
+            <div class="nav-item"><i class="fa-solid fa-user"></i></div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
